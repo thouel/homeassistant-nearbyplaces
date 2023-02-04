@@ -1,0 +1,7 @@
+{
+    "domain": "storesnearby",
+    "name": "Stores Nearby",
+    "requirements": ["python-google-places==1.4.2", "requests_futures==1.0.0"],
+    "iot_class": "cloud_polling",
+    "version": "0.0.1"
+}

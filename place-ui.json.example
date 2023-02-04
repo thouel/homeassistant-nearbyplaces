@@ -1,0 +1,20 @@
+type: markdown
+card_size: 1
+entity_id: sensor.<sensor_name>
+content: >-
+  <h1>{{states.sensor.<sensor_name>.attributes.commercial_name}}</h1> {% if
+  is_state_attr("sensor.<sensor_name>", "open_now", true) %}<ha-alert
+  alert-type="success">Actuellement ouvert</ha-alert> {% else %} <ha-alert
+  alert-type="error">Actuellement fermé</ha-alert>{% endif %} <h3>Les horaires
+  d'ouverture :</h3> <ul><li>
+  {{states.sensor.<sensor_name>.attributes.opening_hours_monday}} </li><li>
+  {{states.sensor.<sensor_name>.attributes.opening_hours_tuesday}}
+  </li><li>
+  {{states.sensor.<sensor_name>.attributes.opening_hours_wednesday}}
+  </li><li>
+  {{states.sensor.<sensor_name>.attributes.opening_hours_thursday}}
+  </li><li> {{states.sensor.<sensor_name>.attributes.opening_hours_friday}}
+  </li><li>
+  {{states.sensor.<sensor_name>.attributes.opening_hours_saturday}}
+  </li><li> {{states.sensor.<sensor_name>.attributes.opening_hours_sunday}}
+  </li></ul>
